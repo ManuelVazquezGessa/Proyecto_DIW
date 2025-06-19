@@ -1,0 +1,43 @@
+@use "../base/variables"as var;
+@use "../base/mixins"as m;
+
+.equipos-registrados {
+  margin-top: var.$separation;
+  margin-bottom: var.$separation;
+}
+
+.equipos-registrados .card {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  background: #fff;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.equipos-registrados .card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+.equipos-registrados .card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+  height: 120px;
+  @include m.mobile {
+    height: 150px;
+  }
+  @include m.tablet {
+    height: 180px;
+  }
+  @include m.desktop {
+    height: 200px;
+  }
+}
+.equipos-registrados .card-body {
+  padding: 1.2rem;
+  @include m.tablet {
+    padding: 2rem;
+  }
+}
+.equipos-registrados .card-title {
+  margin-bottom: 1rem;
+}

@@ -1,0 +1,40 @@
+@use "../base/variables"as var;
+@use "../base/mixins"as m;
+
+.noticias-liga {
+  margin-top: var.$separation;
+  margin-bottom: var.$separation;
+}
+
+.noticias-liga .card {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.noticias-liga .card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+  height: 140px;
+  @include m.mobile {
+    height: 180px;
+  }
+  @include m.tablet {
+    height: 200px;
+  }
+  @include m.desktop {
+    height: 220px;
+  }
+}
+
+.noticias-liga .card-body {
+  padding: 1.2rem;
+  @include m.tablet {
+    padding: 2rem;
+  }
+}
+
+.noticias-liga .card-footer {
+  padding: 1rem 2rem;
+}

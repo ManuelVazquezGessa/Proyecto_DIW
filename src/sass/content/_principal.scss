@@ -1,0 +1,57 @@
+@use "../base/variables"as var;
+@use "../base/mixins"as m;
+
+.card {
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: none;
+}
+.card h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.table thead th {
+  background: var.$primary;
+  color: #fff;
+  border: none;
+}
+.table tbody tr {
+  transition: background 0.2s;
+}
+.table tbody tr:hover {
+  background: #e3f0ff;
+}
+.table td, .table th {
+  vertical-align: middle;
+}
+.btn-primary {
+  background-color: var.$primary;
+  border-color: var.$primary;
+  border-radius: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: 500;
+  transition: background 0.2s, border 0.2s;
+  &:hover {
+    background-color: darken(var.$primary, 10%);
+    border-color: darken(var.$primary, 10%);
+  }
+}
+.equipos-fotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var.$separation;
+  flex-wrap: wrap;
+}
+.equipos-fotos figure {
+  margin: 0;
+}
+.equipos-fotos img {
+  max-width: 70px;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}

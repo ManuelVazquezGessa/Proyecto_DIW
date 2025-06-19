@@ -1,0 +1,35 @@
+@use "../base/variables"as var;
+@use "../base/mixins"as m;
+
+.jugadores-mvp .card {
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.jugadores-mvp .card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+}
+.jugadores-mvp .card-img-top {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  object-fit: cover;
+  height: 160px;
+  @include m.mobile {
+    height: 180px;
+  }
+  @include m.tablet {
+    height: 200px;
+  }
+  @include m.desktop {
+    height: 220px;
+  }
+}
+.jugadores-mvp .card-body {
+  padding: 1.2rem;
+  @include m.tablet {
+    padding: 2rem;
+  }
+}
+

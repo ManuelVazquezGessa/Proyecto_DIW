@@ -1,0 +1,24 @@
+@use "variables" as var;
+//MIXINS
+//Mixin box-sizing
+@mixin box-sizing($box_model) {
+  box-sizing: $box_model;
+}
+
+@mixin tablet {
+  @media screen and (min-width: var.$medium) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: var.$big) {
+    @content;
+  }
+}
+//Media-queries
+@mixin mobile {
+  @media screen and (min-width: var.$small) {
+    @content;
+  }
+}
